@@ -36,9 +36,9 @@
         Next
 
     End Sub
-    Private Sub CargarDeptos(Deptos)
-        cb_depto.Items.Clear()
-        cb_depto.Items.AddRange(Deptos)
+    Private Sub CargarComboBox(Deptos, combobox)
+        combobox.Items.Clear()
+        combobox.Items.AddRange(Deptos)
 
     End Sub
     Private Sub cb_nacionalidad_SelectionChangeCommitted(sender As Object, e As EventArgs) Handles cb_nacionalidad.SelectionChangeCommitted
@@ -51,7 +51,7 @@
                     "Atlántida",
                     "Colón"
                 }
-                CargarDeptos(DeptosHonduras)
+                CargarComboBox(DeptosHonduras, cb_depto)
 
             Case "Estado Unidense"
                 Dim USADeptos As String() = New String() {
@@ -60,7 +60,7 @@
                     "Florida",
                     "Alabama"
                 }
-                CargarDeptos(USADeptos)
+                CargarComboBox(USADeptos, cb_depto)
 
             Case "Español"
                 Dim SpainDeptos As String() = New String() {
@@ -69,12 +69,62 @@
                     "Almeria",
                     "Valencia"
                 }
-                CargarDeptos(SpainDeptos)
+                CargarComboBox(SpainDeptos, cb_depto)
             Case Else
 
         End Select
 
 
 
+    End Sub
+    Private Sub CargarMunicipios(Municipios)
+
+    End Sub
+    Private Sub cb_depto_SelectionChangeCommitted(sender As Object, e As EventArgs) Handles cb_depto.SelectionChangeCommitted
+        '"El Paraiso",
+        '           "Fracisco Morazan",
+        '           "Atlántida",
+        '           "Colón"
+
+        Select Case cb_depto.Text
+            Case "El Paraiso"
+                Dim elParaisoMunicipios As String() = New String() {
+                   "Danli",
+                   "EL Paraiso",
+                   "Yuscaran"
+               }
+                CargarComboBox(elParaisoMunicipios, cb_municipio)
+            Case "Fracisco Morazan"
+                Dim fraciscoMorazanMunicipios As String() = New String() {
+                   "Tegucugalpa",
+                   "Valle de Ángeles",
+                   "Talanga"
+               }
+                CargarComboBox(fraciscoMorazanMunicipios, cb_municipio)
+            Case "Atlántida"
+                Dim elParaisoMunicipios As String() = New String() {
+                   "Ceiba",
+                   "Tela",
+                   "Jutiapa"
+               }
+                CargarComboBox(elParaisoMunicipios, cb_municipio)
+            Case "Colón"
+                Dim colonMunicipios As String() = New String() {
+                   "Trujillo",
+                   "Balfate",
+                   "Iriona"
+               }
+                CargarComboBox(colonMunicipios, cb_municipio)
+            Case Else
+                Dim colonMunicipios As String() = New String() {
+                   "New York",
+                   "Los Angeles",
+                   "Barcelona",
+                   "Madrid",
+                   "Viginia"
+               }
+                CargarComboBox(colonMunicipios, cb_municipio)
+
+        End Select
     End Sub
 End Class
