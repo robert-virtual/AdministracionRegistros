@@ -31,11 +31,11 @@ Partial Class Form1
         Me.txt_name = New System.Windows.Forms.TextBox()
         Me.Nombre = New System.Windows.Forms.Label()
         Me.dgv_registros = New System.Windows.Forms.DataGridView()
-        Me.btn_agregar = New System.Windows.Forms.Button()
         Me.col_nombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.col_nacionalidad = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.col_depto = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.col_municipio = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.btn_agregar = New System.Windows.Forms.Button()
         CType(Me.dgv_registros, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -125,16 +125,6 @@ Partial Class Form1
         Me.dgv_registros.Size = New System.Drawing.Size(688, 272)
         Me.dgv_registros.TabIndex = 3
         '
-        'btn_agregar
-        '
-        Me.btn_agregar.Location = New System.Drawing.Point(629, 145)
-        Me.btn_agregar.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.btn_agregar.Name = "btn_agregar"
-        Me.btn_agregar.Size = New System.Drawing.Size(94, 26)
-        Me.btn_agregar.TabIndex = 4
-        Me.btn_agregar.Text = "Agregar"
-        Me.btn_agregar.UseVisualStyleBackColor = True
-        '
         'col_nombre
         '
         Me.col_nombre.HeaderText = "Nombre"
@@ -162,6 +152,16 @@ Partial Class Form1
         Me.col_municipio.MinimumWidth = 6
         Me.col_municipio.Name = "col_municipio"
         Me.col_municipio.Width = 125
+        '
+        'btn_agregar
+        '
+        Me.btn_agregar.Location = New System.Drawing.Point(629, 145)
+        Me.btn_agregar.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.btn_agregar.Name = "btn_agregar"
+        Me.btn_agregar.Size = New System.Drawing.Size(94, 26)
+        Me.btn_agregar.TabIndex = 4
+        Me.btn_agregar.Text = "Agregar"
+        Me.btn_agregar.UseVisualStyleBackColor = True
         '
         'Form1
         '
